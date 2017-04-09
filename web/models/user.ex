@@ -17,5 +17,6 @@ defmodule PostApp.User do
     |> cast(params, [:name, :email, :bio])
     |> validate_required([:name, :email])
     |> validate_length(:bio, min: 2)
+    |> validate_length(:bio, max: 100)
   end
 end
