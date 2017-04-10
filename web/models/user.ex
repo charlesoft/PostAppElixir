@@ -18,5 +18,6 @@ defmodule PostApp.User do
     |> validate_required([:name, :email])
     |> validate_length(:bio, min: 2)
     |> validate_length(:bio, max: 100)
+    |> validate_format(:email, ~r/@/)
   end
 end
