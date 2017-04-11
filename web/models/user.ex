@@ -6,6 +6,7 @@ defmodule PostApp.User do
     field :email, :string
     field :bio, :string
 
+    has_many :posts, PostApp.Post
     timestamps()
   end
 
