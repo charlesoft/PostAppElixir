@@ -1,0 +1,22 @@
+<h2>Listing posts</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>likes</th>
+      <th>User</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for post <- @posts do %>
+    <tr>
+      <td><%= post.description %></td>
+      <td><%= post.likes %></td>
+      <td><%= post.user.name %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
